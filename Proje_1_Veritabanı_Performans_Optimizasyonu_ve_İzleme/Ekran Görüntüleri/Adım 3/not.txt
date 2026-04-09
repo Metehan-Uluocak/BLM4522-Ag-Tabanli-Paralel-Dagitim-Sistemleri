@@ -1,0 +1,11 @@
+Q1_user_30d_summary
+Plan çıktısında toplama ve sıralama maliyeti yüksek görünüyor. Zaman filtresi ve kullanıcı bazlı gruplaştırma için orders(order_time) ve orders(user_id, order_time) indeksleriyle maliyet düşürülebilir.
+
+Q2_type_90d_volume
+Parallel Hash Join ve Parallel Seq Scan node’ları görüldü. Join ve zaman filtresi yoğun olduğu için trades(executed_at), trades(order_id) ve orders(instrument_id) indeksleri gerekli.
+
+Q3_hourly_7d_density
+GroupAggregate ve Sort adımları maliyet üretiyor. Saatlik gruplaştırma sorgularında order_time filtresini daha seçici kullanmak ve sıralama maliyetini azaltmak gerekir.
+
+Q4_costly_function_sort
+Where koşulunda date_trunc fonksiyonu kullanımı indeks kullanımını zayıflatabilir. Filtreyi doğrudan order_time >= ... biçimine çevirip fonksiyon maliyetini azaltmak daha uygundur.

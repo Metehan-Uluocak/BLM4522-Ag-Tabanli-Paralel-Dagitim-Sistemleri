@@ -24,4 +24,29 @@ Bu projenin amacı, veri kaybı ve servis kesintisi risklerini azaltmak için ö
 ## Adım 5 Dosyaları
 - [sql/05_adim_felaket_senaryosu_ve_pitr_test.sql](sql/05_adim_felaket_senaryosu_ve_pitr_test.sql)
 
+## Adım 6 Dosyaları
+- [sql/06_adim_geri_yukleme_tatbikati_ve_dogrulama.sql](sql/06_adim_geri_yukleme_tatbikati_ve_dogrulama.sql)
+
+## Adım 7 Dosyaları
+- [sql/07_adim_final_kpi_ve_kapanis_raporu.sql](sql/07_adim_final_kpi_ve_kapanis_raporu.sql)
+
+## Proje Planı Uyum Durumu
+- Adım 1: Tamamlandı (RPO/RTO hedefleri, saklama kuralları ve kritik varlık sınıflandırması mevcut)
+- Adım 2: Tamamlandı (tam yedek envanteri, mantıksal/fiziksel yedek akışı, WAL ayar kontrolleri mevcut)
+- Adım 3: Tamamlandı (WAL arşivleme doğrulaması ve kanıt kaydı mevcut)
+- Adım 4: Tamamlandı (Task Scheduler izleme, job run ve alarm tabloları mevcut)
+- Adım 5: Tamamlandı (kontrollü incident ve PITR test hazırlığı mevcut)
+- Adım 6: Tamamlandı (geri yükleme tatbikatı ve doğrulama kontrolleri eklendi)
+- Adım 7: Tamamlandı (final KPI, kapanış değerlendirmesi ve adım bazlı completion check eklendi)
+
+## Çalıştırma Sırası
+1. sql/01_adim_yedekleme_stratejisi_modulu.sql
+2. sql/02_adim_tam_yedekleme_ve_arsivleme_hazirlik.sql
+3. sql/03_adim_wal_arsivleme_dogrulama.sql
+4. sql/04_adim_task_scheduler_izleme.sql
+5. sql/05_adim_felaket_senaryosu_ve_pitr_test.sql
+6. sql/06_adim_geri_yukleme_tatbikati_ve_dogrulama.sql
+7. sql/07_adim_final_kpi_ve_kapanis_raporu.sql
+
+
 

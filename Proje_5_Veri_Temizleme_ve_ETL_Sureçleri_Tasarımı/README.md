@@ -12,5 +12,3 @@ Bu projede ham veriyi staging alana alma, veri temizleme, veri dönüştürme ve
 ## Adım 3 Dosyası
 - [03_adim_yukleme_ve_kalite_raporu.sql](sql/03_adim_yukleme_ve_kalite_raporu.sql)
 
-## Proje Notu
-Bu proje, PostgreSQL içinde sadece SQL kullanarak anlatması ve videoya çekmesi kolay olan ETL akışını hedefler.

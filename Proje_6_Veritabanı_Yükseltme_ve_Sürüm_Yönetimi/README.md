@@ -11,6 +11,3 @@ Bu projede şema sürümü takibi, kontrollü yükseltme, test ve geri dönüş 
 
 ## Adım 3 Dosyası
 - [03_adim_test_ve_geri_donus_plani.sql](sql/03_adim_test_ve_geri_donus_plani.sql)
-
-## Proje Notu
-Bu proje, sürüm yönetimini basit migration mantığıyla anlatarak uygulaması en kolay başlıklardan biri olarak seçildi.

@@ -12,5 +12,3 @@ Bu projede PostgreSQL üzerinde rol tabanlı erişim, satır düzeyi güvenlik, 
 ## Adım 3 Dosyası
 - [03_adim_sifreleme_maskleme_ve_audit.sql](sql/03_adim_sifreleme_maskleme_ve_audit.sql)
 
-## Proje Notu
-Bu üç adım, PostgreSQL ve pgAdmin ile ek araç kurmadan yapılabilecek en kolay güvenlik senaryolarından biri olarak seçildi.

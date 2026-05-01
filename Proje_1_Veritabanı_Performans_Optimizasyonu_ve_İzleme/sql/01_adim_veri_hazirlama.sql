@@ -1,8 +1,4 @@
--- Adım 1: Veri seti hazırlama ve ilk kontroller (PostgreSQL + pgAdmin)
---
--- =========================
--- A) SADECE "postgres" VERİTABANINDA ÇALIŞTIR
--- =========================
+-- Adım 1: Veri seti hazırlama ve ilk kontroller 
 
 -- 1) Önce var mı kontrol et
 SELECT datname FROM pg_database WHERE datname = 'blm4522_perf';
@@ -11,7 +7,7 @@ SELECT datname FROM pg_database WHERE datname = 'blm4522_perf';
 CREATE DATABASE blm4522_perf;
 
 -- =========================
--- B) SADECE "blm4522_perf" VERİTABANINDA ÇALIŞTIR
+-- B) "blm4522_perf" 
 -- =========================
 
 CREATE TABLE IF NOT EXISTS users (

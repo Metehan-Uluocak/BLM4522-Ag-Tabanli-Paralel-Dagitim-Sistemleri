@@ -68,7 +68,16 @@ SELECT
 FROM generate_series(1, 100) AS gs;
 
 -- İlk veri kontrolü
-SELECT COUNT(*) AS department_count FROM departments;
-SELECT COUNT(*) AS user_count FROM app_users;
-SELECT COUNT(*) AS account_count FROM customer_accounts;
-SELECT * FROM customer_accounts ORDER BY account_id LIMIT 5;
+SELECT
+    (SELECT COUNT(*) FROM departments) AS department_count,
+    (SELECT COUNT(*) FROM app_users) AS user_count,
+    (SELECT COUNT(*) FROM customer_accounts) AS account_count,
+    (
+        SELECT json_agg(t)
+        FROM (
+            SELECT *
+            FROM customer_accounts
+            ORDER BY account_id
+            LIMIT 5
+        ) AS t
+    ) AS sample_accounts;
